@@ -55,12 +55,12 @@ if ! command -v docker >/dev/null 2>&1; then
 	REAL_USER=$(logname 2>/dev/null || echo "$SUDO_USER")
 	sudo usermod -aG docker "$REAL_USER"
 
-	clean
+	clear
 	log "\nHotovo. Instalace Dockeru je kompletní."
 	log "Restartujte počítač. Po restartu spusťte skript znovu.\n"
 	
     sleep 3
-	exit 1
+	exit 0
 fi
 
 
