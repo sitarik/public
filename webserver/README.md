@@ -136,6 +136,9 @@ docker compose -p services --project-directory ~/docker/services/ down -v
 Pokud chceš skript stáhnout přímo do PC a nastavit oprávnění ke spuštění:
 
 ```bash
+# Instalace curl
+sudo apt install curl -y
+
 # Stáhnout skript
 curl -o setup.sh https://raw.githubusercontent.com/sitarik/public/refs/heads/main/webserver/setup.sh
 
