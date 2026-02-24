@@ -56,10 +56,9 @@ if ! command -v docker >/dev/null 2>&1; then
 	
 
 	log "\nHotovo. Instalace Dockeru je kompletní."
-	log "Počítač bude nyní restartován. Po restartu spusťte skript znovu.\n"
+	log "Restartujte počítač. Po restartu spusťte skript znovu.\n"
 	
     	sleep 3
-    	sudo reboot
 fi
 
 
