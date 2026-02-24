@@ -137,7 +137,7 @@ Pokud chceš skript stáhnout přímo do PC a nastavit oprávnění ke spuštěn
 
 ```bash
 # Stáhnout skript
-curl -o setup.sh <RAW_URL>
+curl -o setup.sh https://raw.githubusercontent.com/sitarik/public/refs/heads/main/webserver/setup.sh
 
 # Přidělit oprávnění pro spuštění
 chmod +x setup.sh
