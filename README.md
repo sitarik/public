@@ -39,11 +39,3 @@ Pokud tě některý projekt zaujme a chceš přispět:
 ---
 
 > Tento repozitář je mým osobním sandboxem pro experimenty a učení. Vše je zde sdíleno veřejně, pro inspiraci a zábavu.
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
