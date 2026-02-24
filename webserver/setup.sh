@@ -17,6 +17,7 @@ log() {
 # === Instalace rsync ===
 if ! command -v rsync >/dev/null 2>&1; then
 	log "\nSpouštím instalaci rsync..."
+	sleep 1
 	sudo apt-get install rsync -y
 fi
 
@@ -53,12 +54,13 @@ if ! command -v docker >/dev/null 2>&1; then
 	# Add your user to the docker group
 	REAL_USER=$(logname 2>/dev/null || echo "$SUDO_USER")
 	sudo usermod -aG docker "$REAL_USER"
-	
 
+	clean
 	log "\nHotovo. Instalace Dockeru je kompletní."
 	log "Restartujte počítač. Po restartu spusťte skript znovu.\n"
 	
-    	sleep 3
+    sleep 3
+	exit 1
 fi
 
 
