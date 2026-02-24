@@ -11,7 +11,7 @@ Tento projekt poskytuje **automatizovaný skript** pro instalaci Dockeru a vytvo
 1. **Instalace Dockeru a rsync**
    - Pokud Docker není nainstalován, skript jej automaticky nainstaluje.
    - Přidá aktuálního uživatele do skupiny `docker` (pro spuštění kontejnerů bez `sudo`).
-   - Po instalaci Dockeru skript automaticky **restartuje počítač**, aby se změny skupiny projevily.
+   - Po instalaci Dockeru **je nutné restartovat počítač**, aby se změny skupiny projevily.
 
 2. **Vytvoření složek a docker-compose souborů**
    - `services/docker-compose.yaml` – Portainer, Cloudflared a Watchtower. **Nespouští se automaticky.**
@@ -149,7 +149,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-> **Poznámka:** Po prvním spuštění a instalaci Dockeru **se počítač autormaticky restartuje**, aby bylo možné spouštět kontejnery bez `sudo`.
+> **Poznámka:** Po prvním spuštění a instalaci Dockeru **je nutné počítač restartovat**, aby bylo možné spouštět kontejnery bez `sudo`.
 
 ---
 
