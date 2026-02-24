@@ -78,7 +78,7 @@ while true; do
         	break
    	else
         	echo -e "\e[0;91mNeplatný název domény. Povolené znaky: a-z, A-Z, 0-9, tečka a pomlčka.\e[0m"
-    	fi
+    fi
 done
 
 DB_NAME=$(echo "$DOMENA" | tr -cd '[:alnum:]_' | tr '[:upper:]' '[:lower:]')
@@ -316,6 +316,7 @@ fi
 # ----------------------------------------------------------------------
 
 log "\nVytvařím síť websites."
+sleep 1
 docker network inspect websites >/dev/null 2>&1 || \
 docker network create --driver bridge --subnet=172.20.0.0/24 websites
 
@@ -325,6 +326,7 @@ docker network create --driver bridge --subnet=172.20.0.0/24 websites
 # ----------------------------------------------------------------------
 
 log "\nSpouštím web $DOMENA"
+sleep 1
 docker compose -p "$PROJECT_NAME" --project-directory "$USER_HOME"/docker/websites/"$PROJECT_NAME"/ up -d
 
 
